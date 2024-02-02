@@ -18,7 +18,7 @@ li {
 
 img {
   display: block;
-  width: 100%;
+  width: 50px;
 }
 
 p {
@@ -31,7 +31,7 @@ figure {
 
 i {
   font-size: 1.5rem;
-  color: var(--icons-color);
+  color: var(--secondary-text-color);
 }
 
 /* CUSTOM PROPS */
@@ -47,7 +47,7 @@ i {
   --primary-color: #009688;
   --secondary-color: #d4dbd8;
   --primary-text-color: #080808;
-  --secondary-text-color: #818181;
+  --secondary-text-color: #b1b1b1;
   --top-bar-color: #eaeaea;
 
 }
@@ -73,30 +73,46 @@ i {
 
 main {
   width: 70%;
-  /* debug */
-  border: 3px dashed red;
 }
 
 aside {
   width: 30%;
-  /* debug */
-  border: 3px dashed red;
+  border-right: 1px solid var(--secondary-text-color);
 }
 
 .header {
-  /* debug */
-  border-bottom: 3px dashed red;
   background-color: var(--top-bar-color);
   padding: var(--xsmall-size) 0;
 }
 
-.header img {
-  width: 50px;
-}
+
 
 .footer {
-  /* debug */
-  border-top: 3px dashed red;
   height: 50px;
   margin-top: auto;
+}
+
+#notifications {
+  background-color: #8edafc;
+  border: #8edafc;
+}
+
+#notifications p {
+ color: var(--primary-text-color);
+}
+
+.caption p {
+  font-weight: bold;
+}
+
+.caption small {
+  color: var(--secondary-text-color);
+}
+
+.list-group {
+  overflow-y: scroll;
+}
+
+.list-group li {
+  padding: var(--xsmall-size) 0;
 }
