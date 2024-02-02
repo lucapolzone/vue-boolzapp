@@ -26,11 +26,12 @@
 <div id="big-wrapper">
   <div id="ms_container" class="d-flex">
       
-    <!-- Container sx -->
+    <!---------------------->
+    <!-- CONTAINER SX -->
+    <!---------------------->
     <aside>
 
       <!-- HEADER -->
-      <!---------------------->
       <div class="header d-flex justify-content-between">
 
         <figure class="d-flex">
@@ -47,11 +48,11 @@
           <i class="bi bi-three-dots-vertical"></i>
         </div>
       </div>
-      <!-- END HEADER -->
+      <!-- END header -->
 
       <!-- Notifications -->
       <ul class="list-group">
-        <li class="list-group-item active d-flex" id="notifications">
+        <li class="list-group-item active rounded-0 d-flex" id="notifications">
           <i class="bi bi-bell-slash-fill"></i>
           <div class="caption">
             <p>Ricevi notifiche di nuovi messaggi</p>
@@ -61,15 +62,15 @@
       </ul>
 
       <!-- Chat searchbar -->
-      <div class="input-group mb-3">
+      <div class="input-group" id="chat-searchbar">
         <span class="input-group-text" id="basic-addon1">
           <i class="bi bi-search"></i>
         </span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
       </div>
       
-      <!-- Chat list -->
-      <ul class="list-group">
+      <!-- CHAT LIST -->
+      <ul class="list-group" id="chat-list">
         <li class="list-group-item-action">
           <figure class="d-flex">
             <img src="./img/avatar_1.jpg" alt="">
@@ -154,11 +155,12 @@
     </aside>
     <!--END Container sx -->
     
-    <!-- Container dx -->
+    <!---------------------->
+    <!-- CONTAINER DX -->
+    <!---------------------->
     <main class="d-flex flex-column">
 
       <!-- HEADER -->
-      <!---------------------->
       <div class="header d-flex justify-content-between">
 
         <figure class="d-flex">
@@ -175,12 +177,58 @@
           <i class="bi bi-three-dots-vertical"></i>
         </div>
       </div>
-      <!-- END HEADER -->
+      <!-- END header -->
 
-      <div class="footer">
+      <!-- CHAT CONTAINER -->
+      <div id="chat-container">
+        <div class="message-container d-flex justify-content-end">
+          <div class="wrapper-sent-message"> 
+            <div class="sent message rounded-3">
+              <p>
+                Hai portato a spasso il cane?
+              </p>
+              <small class="text-end d-block">15:30</small>
+            </div>
+
+            <div class="sent message rounded-3">
+              <p>
+                Ricordati di stendere i panni
+              </p>
+              <small class="text-end d-block">15:30</small>
+            </div>
+          </div>  
+        </div> 
+          
+          <div class="message-container">  
+            <div class="wrapper-received-message">
+            <div class="received message rounded-3">
+              <p>
+                Tutto fatto!
+              </p>
+              <small class="text-end d-block">16:15</small>
+            </div>
+            </div>
+          </div>
+
+
+        
       </div>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="input-group">
+          <span>
+            <i class="bi bi-emoji-smile"></i>
+          </span>
+          <input type="text" class="form-control me-3" placeholder="Scrivi un messaggio">
+          <span>
+            <i class="bi bi-mic-fill"></i>
+          </span>
+        </div>
+      </div>
+      
     </main>
     <!--END Container dx -->
+
   </div>
 </div>
 
