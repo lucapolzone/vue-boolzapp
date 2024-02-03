@@ -59,8 +59,8 @@ i {
 #big-wrapper {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(var(--primary-color) 20%, var(--secondary-color) 20%); 
-  padding-top: var(--xlarge-size);
+  background-image: linear-gradient(to bottom, var(--primary-color) 0, var(--primary-color) 20%, var(--secondary-color) 20%, var(--secondary-color) 100%); 
+  padding-top: var(--large-size);
 }
 
 #ms_container {
@@ -99,17 +99,17 @@ aside {
 }
 
 
-/* CHAT LIST */
+/* CONTACT LIST */
 
-#chat-searchbar {
+#contact-searchbar {
   padding: var(--small-size);
 }
 
-#chat-list {
+#contact-list {
   overflow-y: scroll;
 }
 
-#chat-list li {
+#contact-list li {
   padding: var(--small-size) 0;
   border-top: 1px solid var(--secondary-color);
 }
@@ -118,7 +118,7 @@ aside {
   font-weight: bold;
 }
 
-#chat-list li:last-child {
+#contact-list li:last-child {
   margin-bottom: var(--large-size);
 }
 

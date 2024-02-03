@@ -71,85 +71,21 @@
       
       <!-- CHAT LIST -->
       <ul class="list-group" id="chat-list">
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
+
+        <li v-for="contact in contacts" class="list-group-item-action">
+          <figure class="d-flex justify-content-between">
+            <div class="d-flex">
+              <img :src="contact.avatar" alt="">
+              <figcaption class="caption">
+                <p> {{ contact.name }} </p>
+                <small>Ultimo messaggio inviato</small>
+              </figcaption>
+            </div>
+            <small>12:00</small>
           </figure>
         </li>
 
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="list-group-item-action">
-          <figure class="d-flex">
-            <img src="./img/avatar_1.jpg" alt="">
-            <figcaption class="caption">
-              <p>Michele</p>
-              <small>Ultimo accesso oggi alle 12:00</small>
-            </figcaption>
-          </figure>
-        </li>
+        
       </ul>
 
     </aside>
@@ -233,6 +169,7 @@
 </div>
 
 <!-- My script -->
-<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/data.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
