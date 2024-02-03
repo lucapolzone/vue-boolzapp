@@ -72,16 +72,16 @@
       <!-- CHAT LIST -->
       <ul class="list-group" id="chat-list">
 
-        <li v-for="contact in contacts" class="list-group-item-action">
+        <li v-for="(contact, index) in contacts" class="list-group-item-action" @click="setActiveIndex(index)">
           <figure class="d-flex justify-content-between">
             <div class="d-flex">
               <img :src="contact.avatar" alt="">
               <figcaption class="caption">
                 <p> {{ contact.name }} </p>
-                <small>Ultimo messaggio inviato</small>
+                <small v-if="contact.messages.length > 0"> {{ getLastMessageFromMessages(contact.messages) }} </small>
               </figcaption>
             </div>
-            <small>12:00</small>
+            <small v-if="contact.messages.length > 0"> {{ getLastAccessFromMessages(contact.messages) }} </small>
           </figure>
         </li>
 
@@ -100,10 +100,10 @@
       <div class="header d-flex justify-content-between">
 
         <figure class="d-flex">
-          <img src="./img/avatar_1.jpg" alt="">
+          <img :src="activeContact.avatar" alt="">
           <figcaption class="caption">
-            <p>Michele</p>
-            <small>Ultimo accesso oggi alle 12:00</small>
+            <p>{{ activeContact.name }}</p>
+            <small>Ultimo accesso oggi {{ getLastAccessFromMessages(activeContact.messages) }}</small>
           </figcaption>
         </figure>
 
@@ -119,23 +119,17 @@
       <div id="chat-container">
         <div class="message-container d-flex justify-content-end">
           <div class="wrapper-sent-message"> 
-            <div class="sent message rounded-3">
+            <div class="sent message rounded-3" v-for="message in activeContact.messages" :class="message.status">
               <p>
-                Hai portato a spasso il cane?
+                {{ message.message }}
               </p>
-              <small class="text-end d-block">15:30</small>
+              <small class="text-end d-block">{{ message.date }}</small>
             </div>
 
-            <div class="sent message rounded-3">
-              <p>
-                Ricordati di stendere i panni
-              </p>
-              <small class="text-end d-block">15:30</small>
-            </div>
           </div>  
         </div> 
           
-          <div class="message-container">  
+          <!-- <div class="message-container">  
             <div class="wrapper-received-message">
             <div class="received message rounded-3">
               <p>
@@ -144,9 +138,7 @@
               <small class="text-end d-block">16:15</small>
             </div>
             </div>
-          </div>
-
-
+          </div> -->
         
       </div>
       <!-- Footer -->
