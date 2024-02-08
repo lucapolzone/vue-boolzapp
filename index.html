@@ -117,9 +117,9 @@
 
       <!-- CHAT CONTAINER -->
       <div id="chat-container">
-        <div class="message-container d-flex justify-content-end">
-          <div class="wrapper-sent-message"> 
-            <div class="sent message rounded-3" v-for="message in activeContact.messages" :class="message.status">
+        <div class="message-container">
+          <div class="wrapper-sent-message d-flex flex-column align-items-end"> 
+            <div class="message rounded-3" v-for="message in activeContact.messages" :class="message.status">
               <p>
                 {{ message.message }}
               </p>

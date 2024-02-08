@@ -128,16 +128,25 @@ main {
   width: 70%;
 }
 
-#chat-container {
-  background-image: url("../img/mine.jpg");
-  height: 700px;
-}
 
 
 /* CHAT CONTAINER */
 
+
 #chat-container {
+  background-image: url("../img/mine.jpg");
+  height: 100%;
   overflow-y: scroll;
+}
+
+
+.list-group-item-action {
+  padding: 8px 0;
+}
+
+.list-group-item-action img {
+  margin-right: 10px;
+  height: 50px;
 }
 
 .message-container {
@@ -158,8 +167,10 @@ main {
 
 .received {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }
-
 
 
 /* Footer */
