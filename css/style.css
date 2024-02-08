@@ -119,6 +119,12 @@ aside {
 }
 
 
+figcaption p, figcaption small {
+  margin-left: 10px;
+}
+
+
+
 
 /* ---------------------- */
 /* CONTAINER DX */
@@ -145,7 +151,6 @@ main {
 }
 
 .list-group-item-action img {
-  margin-right: 10px;
   height: 50px;
 }
 

@@ -36,7 +36,7 @@
 
         <figure class="d-flex">
           <img src="./img/avatar_io.jpg" alt="">
-          <figcaption class="caption">
+          <figcaption class="caption d-flex flex-column justify-content-center">
             <p>Sofia</p>
           </figcaption>
         </figure>
@@ -78,10 +78,10 @@
               <img :src="contact.avatar" alt="">
               <figcaption class="caption">
                 <p> {{ contact.name }} </p>
-                <small v-if="contact.messages.length > 0"> {{ getLastMessageFromMessages(contact.messages) }} </small>
+                <small class="d-flex text-start" v-if="contact.messages.length > 0"> {{ getLastMessageFromMessages(contact.messages) }} </small>
               </figcaption>
             </div>
-            <small v-if="contact.messages.length > 0"> {{ getLastAccessFromMessages(contact.messages) }} </small>
+            <small class="text-end me-2" v-if="contact.messages.length > 0"> {{ getLastAccessFromMessages(contact.messages) }} </small>
           </figure>
         </li>
 
@@ -118,7 +118,7 @@
       <!-- CHAT CONTAINER -->
       <div id="chat-container">
         <div class="message-container">
-          <div class="wrapper-sent-message d-flex flex-column align-items-end"> 
+          <div class="wrapper-message d-flex flex-column align-items-end"> 
             <div class="message rounded-3" v-for="message in activeContact.messages" :class="message.status">
               <p>
                 {{ message.message }}
